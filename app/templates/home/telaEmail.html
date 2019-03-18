@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+     <style type="text/css">
+        * { margin: 0; padding: 0; font-family:Tahoma; font-size:11pt;}
+        #divCenter {
+                width: 400px;
+                height: 150px;
+                left: 55%;
+                margin: -130px 0 0 -210px;
+                padding:10px;
+                position: absolute;
+                top: 65%; }
+    </style>
+    <div id="divCenter">
+        <form name="formulario" action="{{ url_for('home.telaTipoImovel') }}" autocomplete="off" method="post" >
+
+            <p class="email">
+                <label for="email">Qual seu endereço de e-mail ?</label><br>
+                <input type="text" id="email" placeholder="email@example.com" required="required" name="email" />
+
+            </p>
+            <button type="submit" class="btn btn-lg btn-outline-danger" type="button">Próximo</button>
+            <a class="btn btn-lg btn-outline-danger" href="{{ url_for('home.index') }}" role="button">Voltar</a>
+
+        </form>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+    <style type="text/css">
+        * { margin: 0; padding: 0; font-family:Tahoma; font-size:11pt;}
+        #divCenter {
+                width: 400px;
+                height: 150px;
+                left: 55%;
+                margin: -130px 0 0 -210px;
+                padding:10px;
+                position: absolute;
+                top: 65%; }
+    </style>
+    <div id="divCenter">
+       <form name="formulario" autocomplete="off" method="post">
+            <p class="nome">
+                <label>Tipo de imóvel</label><br>
+                <input type="text" id="apartamento" placeholder="apartamento" name="apartamento" /><br><br>
+                <input type="text" id="casa" placeholder="casa" name="casa" />
+
+            </p>
+            <a class="btn btn-lg btn-outline-danger" type="submit" role="button">Próximo</a>
+            <a class="btn btn-lg btn-outline-danger" href="{{ url_for('home.telaEmail') }}" role="button">Voltar</a>
+        </form>
+
+    </div>
+{% endblock %}
